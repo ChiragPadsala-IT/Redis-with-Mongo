@@ -15,6 +15,11 @@ app.post("/banner", async (req, res) => {
   res.json({ message: "Banner updated" });
 });
 
+app.get("/banner", async (req, res) => {
+  const banner = await redis.get(BANNER_KEY);
+  res.json({ banner });
+});
+
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
