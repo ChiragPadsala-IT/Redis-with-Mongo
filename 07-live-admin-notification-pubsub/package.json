@@ -4,7 +4,8 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "node src/index.js"
+        "dev": "node src/index.js",
+        "subscriber": "node src/subscriber.js"
     },
     "dependencies": {
         "ioredis": "^5.4.1",
